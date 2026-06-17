@@ -84,6 +84,7 @@ export default function Pricing() {
                 <div className="prc-grid">
                     {plans.map((p, i) => (
                         <Reveal key={p.name} delay={i * 100}>
+                            <div style={p.popular ? { paddingTop: "13px" } : {}}>
                             <div className={`prc-card ${p.popular ? "prc-card-popular" : "prc-card-default"}`}>
                                 {p.popular && <><div className="prc-badge">✦ Популярное</div><div className="prc-top-line" /></>}
 
@@ -115,6 +116,7 @@ export default function Pricing() {
                                 <a href="#contact" className={p.popular ? "btn-gold" : "btn-outline"} style={{ width: "100%", justifyContent: "center", display: "flex", marginTop: "auto" }}>
                                     Выбрать
                                 </a>
+                            </div>
                             </div>
                         </Reveal>
                     ))}
