@@ -50,11 +50,11 @@ export default function Pricing() {
                     background: linear-gradient(145deg, #1E1A14, #2A2218);
                     border: 1px solid rgba(201,168,76,0.4);
                     box-shadow: 0 0 60px rgba(201,168,76,0.12), 0 24px 56px rgba(0,0,0,0.5);
-                    padding: 2.75rem 2rem 2rem;
+                    padding: 2rem;
                     z-index: 1;
                 }
                 .prc-badge {
-                    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+                    display: block; width: fit-content; margin: 0 auto 1.25rem;
                     background: linear-gradient(135deg, #9A7830, #C9A84C);
                     color: #0D0B09; padding: 0.28rem 1.1rem; border-radius: 2px;
                     font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em;
@@ -84,9 +84,8 @@ export default function Pricing() {
                 <div className="prc-grid">
                     {plans.map((p, i) => (
                         <Reveal key={p.name} delay={i * 100}>
-                            <div style={p.popular ? { paddingTop: "13px" } : {}}>
                             <div className={`prc-card ${p.popular ? "prc-card-popular" : "prc-card-default"}`}>
-                                {p.popular && <><div className="prc-badge">✦ Популярное</div><div className="prc-top-line" /></>}
+                                {p.popular && <><div className="prc-top-line" /><div className="prc-badge">✦ Популярное</div></>}
 
                                 <div style={{ marginBottom: "1.5rem" }}>
                                     <div style={{ color: p.popular ? "#C9A84C" : "var(--text-muted)", marginBottom: "0.75rem", display: "flex" }}>{p.icon}</div>
@@ -116,7 +115,6 @@ export default function Pricing() {
                                 <a href="#contact" className={p.popular ? "btn-gold" : "btn-outline"} style={{ width: "100%", justifyContent: "center", display: "flex", marginTop: "auto" }}>
                                     Выбрать
                                 </a>
-                            </div>
                             </div>
                         </Reveal>
                     ))}
