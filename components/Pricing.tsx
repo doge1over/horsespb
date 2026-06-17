@@ -54,7 +54,7 @@ export default function Pricing() {
                     z-index: 1;
                 }
                 .prc-badge {
-                    display: block; width: fit-content; margin: 0 auto 1.25rem;
+                    display: block; width: fit-content; margin: 0 auto 0.6rem;
                     background: linear-gradient(135deg, #9A7830, #C9A84C);
                     color: #0D0B09; padding: 0.28rem 1.1rem; border-radius: 2px;
                     font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em;
@@ -84,8 +84,10 @@ export default function Pricing() {
                 <div className="prc-grid">
                     {plans.map((p, i) => (
                         <Reveal key={p.name} delay={i * 100}>
+                            <div>
+                            {p.popular && <div className="prc-badge">✦ Популярное</div>}
                             <div className={`prc-card ${p.popular ? "prc-card-popular" : "prc-card-default"}`}>
-                                {p.popular && <><div className="prc-top-line" /><div className="prc-badge">✦ Популярное</div></>}
+                                {p.popular && <div className="prc-top-line" />}
 
                                 <div style={{ marginBottom: "1.5rem" }}>
                                     <div style={{ color: p.popular ? "#C9A84C" : "var(--text-muted)", marginBottom: "0.75rem", display: "flex" }}>{p.icon}</div>
@@ -115,6 +117,7 @@ export default function Pricing() {
                                 <a href="#contact" className={p.popular ? "btn-gold" : "btn-outline"} style={{ width: "100%", justifyContent: "center", display: "flex", marginTop: "auto" }}>
                                     Выбрать
                                 </a>
+                            </div>
                             </div>
                         </Reveal>
                     ))}
