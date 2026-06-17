@@ -41,7 +41,7 @@ export default function Services() {
                 }
                 .srv-card:hover::before { transform: scaleX(1); }
                 .srv-tag {
-                    position: absolute; top: 1.25rem; right: 1.25rem;
+                    position: absolute; top: 1.25rem; right: 1.25rem; z-index: 2;
                     background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.18);
                     border-radius: 2px; padding: 0.2rem 0.65rem;
                     font-size: 0.58rem; font-weight: 700; letter-spacing: 0.18em;
