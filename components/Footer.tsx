@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { PiHorse } from "react-icons/pi";
-import { SiVk, SiYoutube, SiInstagram } from "react-icons/si";
+import { SiVk, SiYoutube, SiTelegram } from "react-icons/si";
 
 const cols = [
     { title: "Услуги",      links: [{ l: "Конные прогулки", h: "#services" }, { l: "Прогулка для двоих", h: "#services" }, { l: "Детские прогулки", h: "#services" }, { l: "Обучение езде", h: "#services" }, { l: "Фотосессии", h: "#services" }, { l: "Подарочные сертификаты", h: "#services" }] },
@@ -40,9 +40,10 @@ export default function Footer() {
                         </p>
                         <div style={{ display: "flex", gap: "0.6rem" }}>
                             {([
-                                { icon: <SiVk size={14} />,        h: "https://vk.com/horsespb" },
-                                { icon: <SiYoutube size={14} />,   h: "#" },
-                                { icon: <SiInstagram size={14} />, h: "#" },
+                                { icon: <SiVk size={14} />,       h: "https://vk.com/horse_club_spb" },
+                                { icon: <SiTelegram size={14} />, h: "https://t.me/horsespb" },
+                                { icon: <SiYoutube size={14} />,  h: "https://www.youtube.com/channel/UCASkrpr5H4JwkkjvDR0sSGw" },
+                                { icon: <span style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "-0.03em" }}>Max</span>, h: "https://max.ru/u/f9LHodD0cOKCWNwduMq4oNj-vsN3H5zqM7pgtk0D2axrCZRMzJ-doIyySTs" },
                             ] as { icon: React.ReactNode; h: string }[]).map((s, i) => (
                                 <a key={i} href={s.h} target="_blank" rel="noopener noreferrer" className="ftr-social">{s.icon}</a>
                             ))}

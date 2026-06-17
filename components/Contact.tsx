@@ -3,7 +3,7 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import Reveal from "@/components/Reveal";
 import { IconMapPin, IconPhone, IconMail, IconClock } from "@/components/Icons";
-import { SiVk, SiYoutube, SiInstagram } from "react-icons/si";
+import { SiVk, SiYoutube, SiTelegram } from "react-icons/si";
 import { CircleCheck } from "lucide-react";
 
 const contactItems: { icon: ReactNode; label: string; value: string; sub?: string; href?: string }[] = [
@@ -89,9 +89,10 @@ export default function Contact() {
                             <div style={{ fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.85rem" }}>Мы в соцсетях</div>
                             <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
                                 {([
-                                    { l: "ВКонтакте", icon: <SiVk size={13} />,        h: "https://vk.com/horsespb" },
-                                    { l: "YouTube",   icon: <SiYoutube size={13} />,   h: "#" },
-                                    { l: "Instagram", icon: <SiInstagram size={13} />, h: "#" },
+                                    { l: "ВКонтакте", icon: <SiVk size={13} />,       h: "https://vk.com/horse_club_spb" },
+                                    { l: "Telegram",  icon: <SiTelegram size={13} />, h: "https://t.me/horsespb" },
+                                    { l: "YouTube",   icon: <SiYoutube size={13} />,  h: "https://www.youtube.com/channel/UCASkrpr5H4JwkkjvDR0sSGw" },
+                                    { l: "Max.ru",    icon: <span style={{ fontSize: "10px", fontWeight: 800 }}>Max</span>, h: "https://max.ru/u/f9LHodD0cOKCWNwduMq4oNj-vsN3H5zqM7pgtk0D2axrCZRMzJ-doIyySTs" },
                                 ] as { l: string; icon: ReactNode; h: string }[]).map(s => (
                                     <a key={s.l} href={s.h} target="_blank" rel="noopener noreferrer" className="cnt-social-pill">
                                         {s.icon}{s.l}

@@ -72,7 +72,7 @@ export default function Reviews() {
 
                 <Reveal>
                     <div style={{ textAlign: "center" }}>
-                        <a href="https://vk.com/horsespb" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                        <a href="https://vk.com/horse_club_spb" target="_blank" rel="noopener noreferrer" className="btn-outline">
                             Читать все отзывы ВКонтакте →
                         </a>
                     </div>
