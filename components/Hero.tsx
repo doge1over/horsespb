@@ -138,6 +138,7 @@ export default function Hero() {
                 @media (max-width: 768px) {
                     .hero-content { padding: 72px 1.5rem 160px; }
                     .hero-scroll-hint { display: none; }
+                    .hero-bg-img { object-position: 30% 30% !important; }
                 }
                 @media (max-width: 600px) {
                     .hero-btns .btn-gold,
@@ -152,7 +153,8 @@ export default function Hero() {
                         src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1920&auto=format&fit=crop&q=85"
                         alt="Лошадь"
                         fill
-                        style={{ objectFit: "cover", objectPosition: "center 30%" }}
+                        className="hero-bg-img"
+                    style={{ objectFit: "cover", objectPosition: "center 30%" }}
                         priority
                     />
                 </div>
