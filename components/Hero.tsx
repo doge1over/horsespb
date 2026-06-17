@@ -138,7 +138,7 @@ export default function Hero() {
                 @media (max-width: 768px) {
                     .hero-content { padding: 72px 1.5rem 160px; }
                     .hero-scroll-hint { display: none; }
-                    .hero-bg-img { object-position: 30% 30% !important; }
+                    .hero-bg-img { object-position: 70% 30% !important; }
                 }
                 @media (max-width: 600px) {
                     .hero-btns .btn-gold,
